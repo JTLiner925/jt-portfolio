@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>HTML wireframe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
-    
+
     <main role="main">
         <header role="banner">
             <h1>Banner</h1>
         </header>
         <nav role="navigation">
-            <div class="toggle-section">
-                <button class="profile">Profile</button>
-                <button class="contact">Contact Me</button>
-                <button class="projects">Projects</button>
-                    </div>
+            <ul class="toggle-section">
+                <li class="profile">Profile</li>
+                <li class="projects">Projects</li>
+                <li class="contact">Contact Me</li>
+            </ul>
         </nav>
         <section class="hero">
             <h2>Profile</h2>
             <p>When you click the buttons above, <br>this section will change</p>
         </section>
-        
-        
-        
+        <div class='expanded'>
+        <section class="profile expand">this is the about me section</section>
+        <section class="projects expand">a list of my projects will go here</section>
+        <section class="contact expand">my contact info</section>
+    </div>
         <!-- <section>
             Section 4
         </section> -->
     </main>
     <footer role="content-info">Footer</footer>
 </body>
+
 </html>
