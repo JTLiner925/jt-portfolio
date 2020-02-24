@@ -6,95 +6,153 @@
       height: 10px
   }
   body {
-    font-family: "Open Sans",
-    sans-serif; 
-    font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      margin: 0;
+    font-family: "Josefin Sans";
+    font-size: 16px;
     color: #444;
     text-align: center;
     line-height: 1.5;
   }
-  
-  footer {
-      margin: 10px;
-    padding: 1% 0;
-    background-color: #aaa;
+  main {
+     background-color: #ffffff; 
   }
-  
-  /* nav {
-    position: fixed;
-  
-  } */
-  
-  
-  
+  h1 {
+      margin: 0;
+      width: 40%;
+  }
+  h2 {
+      margin-top: 0;
+  }
+  footer {
+    background-color: #40b3f148;
+    margin-left: -50px;
+    margin-right: -50px;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+  }
+  header>p{
+      width: 60%;
+  }
   header {
-    padding: 8% 0;
-    margin: 10px;
-    border: 2px solid black;
+    background: linear-gradient(180deg, rgba(0, 187, 255, 0.591), rgba(193, 239, 247, 0.31));
+      align-items: center;
+      display: flex;
+      margin: 0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    font-family: "Montserrat" ;
+  }
+  .button-toggle {
+      align-content: center;
+      margin-right: 20px;
+      margin-left: 20px;
   }
   .hero {
-      visibility: visible;
-      margin: 10px;
-      height: 150px;
-      /* text-align: center;
-    line-height: 1.5; */
-  }
-  .toggle-section{
-      margin: 10px;
       display: flex;
-      align-content: space-between;
-    height: 100px;
-    /* background-color: #bbb; */
-    padding: 0;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #ffffff;
   }
-  li {
-      list-style-type: none;
-      background-color: lightgray;
-      border: 1px solid gray;
-      height: 90px;
-      margin: auto;
-      width: 32%;
-  }
-  section:nth-child(even) {
-    background-color: #ddd;
-  }
-  @media screen and (min-width: 720px) {
-  .hero, h2{
-      opacity: 0;
-      height: 5px;
-  }
-  .toggle-section {
-      margin: 10px;
-
-      height: 50px;
-  }
-  li {
-      height: 75px;
-  }
-  .expanded {
-      opacity: 100%;
-      height: 300px;
-      margin: 10px;
-     
-    display: flex;
-    align-content: space-between;
-  }
-  .expand {
-      margin: auto;
-      height: 300px;
-      border: 1px solid gray;
-      width: 32%;
-  }
-  .projects {
-      width: 47%;
-  }
-  .profile{
-      width: 30%;
-  }
-   .contact {
-       width: 20%;
+  .profile-hero {
+      background-image: url(./self-port.JPG);
+      background-size: cover;
+      background-repeat: no-repeat;
+    background-color: #ffffff;
+      visibility: visible;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      height: 450px;
+    margin: auto;
+    margin-bottom: 50px;
+    box-shadow: 0 12px 28px 0 rgba(15, 56, 167, 0.671);  
+    max-width: 600px;
    }
-    }
-    @media screen and (min-width: 900px) {
+    .toggle-section{
+      padding: 0;
+      align-items: center;
+    height: 40px;
+    font-family: "Montserrat";
+    
+  }
+  .hero p, .hero h2 {
+      text-align: start;
+      padding-left: 10px;
+  }
+  .projects-hero {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      padding: 0;
+      margin: 0;
+
+  }
+  .contact-hero {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      list-style-type: none;
+      height: 30px;
+      width: 32%;
+  }
+  
+  @media screen and (min-width: 900px) {
+      .toggle-section {
+          font-size: 24px;
+        justify-content: space-around;
+      }
+      .large-hero{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          width: 100%;  
+      }
+      .hero {
+          width: 25%;
+          margin: 0 0 50px 0;
+          border-radius: 5px;
+      }
+      .projects-hero:hover {
+        box-shadow: 0 12px 28px 0 rgba(196, 148, 65, 0.993);  
         
+        transition-duration: .5s;
+      }
+    .projects-hero {
+        background-image: url(./bible-image.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+        opacity: 100%;
+        padding: 0;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        height: 450px;
+      
+      box-shadow: 0 12px 28px 0 rgba(196, 148, 65, 0.645);  
+    }
+    
+    .contact-hero {
+        background-image: url(./phone.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+        opacity: 100%;
+        padding: 0;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        height: 450px;
+      box-shadow: 0 12px 28px 0 rgba(70, 37, 19, 0.678); 
+    }
 }
