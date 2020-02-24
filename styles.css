@@ -24,7 +24,8 @@
       width: 40%;
   }
   h2 {
-      margin-top: 0;
+
+      margin-top: 10px;
   }
   footer {
     background-color: #40b3f148;
@@ -55,6 +56,7 @@
       flex-direction: column;
       justify-content: flex-end;
       color: #ffffff;
+      border-radius: 20px;
   }
   .profile-hero {
       background-image: url(./self-port.JPG);
@@ -78,9 +80,19 @@
     font-family: "Montserrat";
     
   }
-  .hero p, .hero h2 {
+  .hero h2 {
+      margin: 0;
+     visibility: hidden;
+     background-color: rgba(52, 52, 75, 0.289);
+  }
+  .hero p {
+      margin: 0;
+      margin-bottom: 20px;
       text-align: start;
+      justify-items: flex-end;
       padding-left: 10px;
+      background-color: rgba(52, 52, 75, 0.604);
+
   }
   .projects-hero {
       width: 0;
@@ -104,9 +116,13 @@
       list-style-type: none;
       height: 30px;
       width: 32%;
+      font-size: 20px;
   }
   
   @media screen and (min-width: 900px) {
+      li{
+          visibility: collapse;
+      }
       .toggle-section {
           font-size: 24px;
         justify-content: space-around;
@@ -120,7 +136,10 @@
       .hero {
           width: 25%;
           margin: 0 0 50px 0;
-          border-radius: 5px;
+          /* border-radius: 5px; */
+      }
+      .hero h2 {
+          visibility: visible
       }
       .projects-hero:hover {
         box-shadow: 0 12px 28px 0 rgba(196, 148, 65, 0.993);  
