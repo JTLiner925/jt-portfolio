@@ -1,5 +1,5 @@
 const STORE = {
-    
+
 }
 
 
@@ -18,7 +18,7 @@ function startPage(){
    </nav>
    <div class="large-hero">
        <section class="profile-hero hero">
-           <h2>Profile</h2>
+           <h2 class="profile">Profile</h2>
            <p class="profile-text"></p>
        </section>
        <section class="projects-hero hero">
@@ -51,13 +51,21 @@ function profileSection(){
 }
 function handleProfileClick(){
   $('.profile').on('click', function(){
-      const profileBio = `<p>I live in the Austin area but grew up in West Texas with dirt fields and mesquite trees. With all the rolling hills and streams nearby it makes it easy to allow your mind to wander! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was time for a change.
-      Seth Godin said, “Art is the act of a human being doing generous work, creating something for the first time, touching another person.” 
+      const profileBio = `<p>I live in the Austin area but grew up in West Texas with dirt fields and mesquite trees. With all the rolling hills and streams nearby it makes it easy to allow your mind to wander! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was time for a change. 
       I love thinking outside the box and being creative. To be able to help others create content that is important to them is exciting for me and the reason why I got into being a developer.
       In my spare time ...well, I don’t have any! Instead, I am happily married with three kids! We drive a min-van, go hiking, and love Jesus. Below I have some examples of my art, stay tuned for more!
       </p>`;
+      const bioGone = ' ';
       $('.profile-text').html(profileBio);
+      
   } );
+  $('.profile-hero').on('.click', function(){
+    const profileBio = `<p>I live in the Austin area but grew up in West Texas with dirt fields and mesquite trees. With all the rolling hills and streams nearby it makes it easy to allow your mind to wander! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was time for a change. 
+    I love thinking outside the box and being creative. To be able to help others create content that is important to them is exciting for me and the reason why I got into being a developer.
+    In my spare time ...well, I don’t have any! Instead, I am happily married with three kids! We drive a min-van, go hiking, and love Jesus. Below I have some examples of my art, stay tuned for more!
+    </p>`;
+      $('.profile-text').html(profileBio);
+  });
 }
 function handlePortfolio(){
     render();
