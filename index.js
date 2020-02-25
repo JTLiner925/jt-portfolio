@@ -6,8 +6,8 @@ const STORE = {
 
 let currentPage = 'startPage';
 function startPage() {
-  console.log('`startPage function` is working');
-  return `<section class ="top-background">
+    console.log('`startPage function` is working');
+    return `<section class ="top-background">
    </section>
 <div class="button-toggle">
    <nav role="navigation">
@@ -29,12 +29,29 @@ function startPage() {
        </section>
        <section name="Projects"class="projects-hero hero ">
        <figure>
-       <img src='./bible-image.jpg' alt='bible with glasses on top'/>
+       <img src='./work-station.jpg' alt='workstation with multiple computers' class="bible-app"/>
        <figcaption>
            <h2>Projects</h2>
-            <p class="projects-text"></p>   
+           <section class='projects'>
+           <div class ='proj'>
+           <p class="appTitle"></p>
+           <div class='appPic'>
+           </div>
+           <p class="techUsed"></p>
+            <p class="projects-text"></p> 
+            </div>
+            <div class = 'proj'>
+            <p class="jagTitle"></p>
+           <div class='jagPic'>
+           </div>
+           
+           <p class="techUsed"></p>
+            <p class="projects-text"></p> 
+            </div>  
+            </section>
             </figcaption>
-            </figure>    
+            </figure> 
+
         </section>
        <section name="Contact"class="contact-hero hero"id="active">
        <figure>
@@ -59,48 +76,80 @@ function startPage() {
    `;
 }
 function render() {
-  console.log('handleStart ran');
-  const mainPortfolio = startPage();
-  $('main').html(mainPortfolio);
+    console.log('handleStart ran');
+    const mainPortfolio = startPage();
+    $('main').html(mainPortfolio);
 }
-function activeClass(name){
-  $('.hero').removeAttr("id");
-  $(`section[name=${name}]`).attr('id','active');
+function activeClass(name) {
+    $('.hero').removeAttr("id");
+    $(`section[name=${name}]`).attr('id', 'active');
 }
 function handleProfileClick() {
-  $('.profile-hero, .Profile').on('click', function () {
-    console.log(this);
-    activeClass($(this).attr('name'));
-    const profileBio = `<p>I live in the Austin area but grew up in West Texas with dirt fields and mesquite trees. With all the rolling hills and streams nearby it makes it easy to allow your mind to wander! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was time for a change. 
+    $('.profile-hero, .Profile').on('click', function () {
+        console.log(this);
+        activeClass($(this).attr('name'));
+        const profileBio = `<p>I live in the Austin area, but grew up in West Texas with dirt fields and mesquite trees. Now when I go outside I see rolling hills and streams nearby, it makes it easy to allow your mind to wander! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was time for a change. 
       I love thinking outside the box and being creative. To be able to help others create content that is important to them is exciting for me and the reason why I got into being a developer.
-      In my spare time ...well, I don’t have any! Instead, I am happily married with three kids! We drive a min-van, go hiking, and love Jesus. Below I have some examples of my art, stay tuned for more!
+      In my spare time ...well, I don’t have any! Instead, I am happily married with three kids! We drive a min-van, go hiking, and love Jesus!
       </p>`;
-    //   $('.profile-text').html(profileBio);
-    $('.profile-text').fadeIn('slow');
-    $('.profile-text').html(profileBio);
-    
-    $('.contact-text').html('');
-    $('.contact-links').html('');
-  });
+
+        $('.profile-text').html(profileBio);
+
+        $('.contact-text').html('');
+        $('.contact-links').html('');
+        $('.appTitle').html('');
+        $('.appPic').html('');
+        $('.techUsed').html('');
+        $('.jagTitle').html('');
+        $('.jagPic').html('');
+    });
 }
 function handleContactClick() {
-  $('.contact-hero, .Contact').on('click', function () {
-    activeClass($(this).attr('name'));
-    const contactInfo = `<p>To contact me follow one of the links below and let's get started!</p>`;
-    const contactLinks = `<a href="#" class="fa fa-google"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-github"></a>
+    $('.contact-hero, .Contact').on('click', function () {
+        activeClass($(this).attr('name'));
+        const contactInfo = `<p>To contact me follow one of the links below and let's get started!</p>`;
+        const contactLinks = `<a href="https://www.linkedin.com/in/jt-liner-916a2a53/" class="fa fa-linkedin"></a>
+        <a href="https://github.com/JTLiner925/" class="fa fa-github"></a>
        `;
 
-    $('.contact-text').html(contactInfo);
-    $('.contact-links').html(contactLinks);
-    $('.profile-text').html('');
-  });
+        $('.contact-text').html(contactInfo);
+        $('.contact-links').html(contactLinks);
+        $('.profile-text').html('');
+        $('.appTitle').html('');
+        $('.appPic').html('');
+        $('.techUsed').html('');
+        $('.jagTitle').html('');
+        $('.jagPic').html('');
+    });
+}
+function handleProjectClick() {
+    $('.projects-hero, .Projects').on('click', function () {
+        activeClass($(this).attr('name'));
+        const tech = `<p class='bible-description'>Did Jesus really say that?<br>HTML/CSS<br>JavaScript/jQuery<br>
+        <a href="https://github.com/JTLiner925/quiz-app-jt" >GitHub Repo</a>
+        </p>`;
+        const jagThumb = `<a href="https://thinkful-ei-jaguar.github.io/quiz-app-project-BladeJT/"target="_blank"><img src="./jaguar.jpg" alt='Mean Jaguar looking at you'/></a><br>`;
+
+        const appThumb = `<a href="https://jtliner925.github.io/quiz-app-jt/"target="_blank"><img src="./bible-image.jpg" alt='bible open with glasses'/></a><br>`;
+        const jagTech = `<p class='bible-description'>How much do you know about Jaguars?<br>HTML/CSS<br>JavaScript/jQuery<br>
+        <a href="https://github.com/JTLiner925/quiz-app-jt" >GitHub Repo</a>
+        </p>`
+        $('.appTitle').html('Bible Quiz');
+        $('.appPic').html(appThumb);
+        $('.techUsed').html(tech);
+        $('.jagTitle').html('Jaguar Quiz');
+        $('.jagPic').html(jagThumb);
+        $('.contact-text').html('');
+        $('.contact-links').html('');
+        $('.profile-text').html('');
+})
+
 }
 function handlePortfolio() {
-  render();
-  handleProfileClick();
-  handleContactClick();
+    render();
+    handleProfileClick();
+    handleContactClick();
+    handleProjectClick();
 }
 
 $(handlePortfolio);

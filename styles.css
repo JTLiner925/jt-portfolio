@@ -23,17 +23,46 @@
     opacity: 100%;
     
   }
-  #active figure img{
-    filter: blur(8px);
+  .bible-description{
+    /* display: flex; */
+    height: 100px;
+
+  }
+  .projects{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+
+  }
+  .proj{
     
+    display: flex;
+    flex-direction: column;
+  }
+  .appTitle{
+    padding-left: 20px;
   }
   #active figcaption{
-    background-color: rgba(52, 52, 75, 0.5);
+    background-color: rgba(52, 71, 75, 0.735);
     height: 100%;
     width: 100%;
     border-radius: 20px;
   }
+  .appPic, .jagPic{
+    width: 100px;
+    height: 100px;
+    filter: unset;
+    margin-left: 20px;
+  }
+  .appPic:hover, .jagPic:hover{
+    width: 102px;
+    height: 102px;
+    opacity: 80%;
+  }
+  
   figure{
+    display: flex;
+    flex-direction: row;
     position: relative;
     border-radius: 20px;
     margin: 0;
@@ -52,6 +81,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.938);
   }
   figcaption p {
     overflow: hidden;
@@ -64,11 +95,12 @@
      margin: 0;
   }
   h1 {
-      margin: 0;
-      width: 40%;
+      /* margin: 0; */
+      width: 50%;
+      font-size: 48px;
   }
   h2 {
-
+text-shadow:1pt 2pt #444;
       margin-top: 10px;
   }
   footer {
@@ -79,15 +111,33 @@
     right: 0;
     bottom: 0;
   }
+  .projects-hero:hover {
+    opacity: 70%;
+    box-shadow: 0 12px 28px 0 rgba(196, 148, 65, 0.993);  
+    
+    transition-duration: 1s;
+  }
+  .profile-hero:hover{
+    opacity: 70%;
+    box-shadow: 0 12px 28px 0 rgba(15, 56, 167, 0.91); 
+    transition-duration: 1s;
+  }
+  .contact-hero:hover{
+    opacity: 70%;
+    box-shadow: 0 12px 28px 0 rgba(41, 20, 8, 0.98); 
+    transition-duration: 1s;
+  }
   header>p{
-      width: 60%;
+      width: 50%;
+      display: contents;
   }
   header {
     background: linear-gradient(180deg, rgba(0, 187, 255, 0.591), rgba(193, 239, 247, 0.31));
       align-items: center;
+      align-content: center;
       display: flex;
       margin: 0;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 9px 0 rgba(255, 255, 255, 0.938);
     font-family: "Montserrat" ;
   }
   .button-toggle {
@@ -221,17 +271,14 @@
           transition: 1s;
           /* border-radius: 5px; */
       }
+      
       .hero h2 {
           visibility: visible
       }
-      .projects-hero:hover {
-        box-shadow: 0 12px 28px 0 rgba(196, 148, 65, 0.993);  
-        
-        transition-duration: .5s;
-      }
+     
       #active {
         max-width: 50%;
-        transition: 1s;
+        transition: 2s;
       }
     .projects-hero {
         opacity: 100%;
