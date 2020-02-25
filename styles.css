@@ -84,7 +84,7 @@
     top: 0;
     padding: 10px;
     opacity: 0;
-    transition: 1s 2s;
+    transition: opacity 1s 2s;
   }
   figure img{
     width: 100%;
@@ -287,15 +287,21 @@ text-shadow:1pt 2pt #444;
       }
       
       .hero h2 {
-          visibility: visible
+          visibility: visible;
+          
       }
-     /* figcaption{
+     figcaption{
+       width: 100%;
+       position: absolute;
+       top: 0;
+       padding: 10px;
        opacity: 0;
+       transition: opacity 1s 2s;
      }
      #active figcaption{
-       transition: 1s .5s;
+       transition: 1s 2s;
        opacity: 1;
-     } */
+     }
       #active {
         max-width: 50%;
         transition: 2s;
