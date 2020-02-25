@@ -53,6 +53,7 @@
     height: 100%;
     width: 100%;
     border-radius: 20px;
+    opacity: 1;
   }
   .appPic, .jagPic{
     width: 100px;
@@ -81,8 +82,9 @@
     width: 100%;
     position: absolute;
     top: 0;
-    
     padding: 10px;
+    opacity: 0;
+    transition: 1s 2s;
   }
   figure img{
     width: 100%;
@@ -287,7 +289,13 @@ text-shadow:1pt 2pt #444;
       .hero h2 {
           visibility: visible
       }
-     
+     /* figcaption{
+       opacity: 0;
+     }
+     #active figcaption{
+       transition: 1s .5s;
+       opacity: 1;
+     } */
       #active {
         max-width: 50%;
         transition: 2s;
