@@ -22,7 +22,7 @@ function startPage() {
        <figure>
             <img src='./self-port.JPG' alt='Picture of JT and Christy Liner'/>
             <figcaption>
-           <h2 class="profile">Profile</h2>
+           <h2 class="Profile">Profile</h2>
            <p class="profile-text"></p>
            </figcation>
            </figure>
@@ -45,7 +45,7 @@ function startPage() {
            <div class='jagPic'>
            </div>
            
-           <p class="techUsed"></p>
+           <p class="jagTech"></p>
             <p class="projects-text"></p> 
             </div>  
             </section>
@@ -102,14 +102,15 @@ function handleProfileClick() {
         $('.techUsed').html('');
         $('.jagTitle').html('');
         $('.jagPic').html('');
+        $('.jagTech').html('');
     });
 }
 function handleContactClick() {
     $('.contact-hero, .Contact').on('click', function () {
         activeClass($(this).attr('name'));
         const contactInfo = `<p>To contact me follow one of the links below and let's get started!</p>`;
-        const contactLinks = `<a href="https://www.linkedin.com/in/jt-liner-916a2a53/" class="fa fa-linkedin"></a>
-        <a href="https://github.com/JTLiner925/" class="fa fa-github"></a>
+        const contactLinks = `<a href="https://www.linkedin.com/in/jt-liner-916a2a53/" class="fa fa-linkedin" target="_blank"></a>
+        <a href="https://github.com/JTLiner925/" class="fa fa-github" target="_blank"></a>
        `;
 
         $('.contact-text').html(contactInfo);
@@ -120,25 +121,27 @@ function handleContactClick() {
         $('.techUsed').html('');
         $('.jagTitle').html('');
         $('.jagPic').html('');
+        $('.jagTech').html('');
     });
 }
 function handleProjectClick() {
     $('.projects-hero, .Projects').on('click', function () {
         activeClass($(this).attr('name'));
         const tech = `<p class='bible-description'>Did Jesus really say that?<br>HTML/CSS<br>JavaScript/jQuery<br>
-        <a href="https://github.com/JTLiner925/quiz-app-jt" >GitHub Repo</a>
+        <a href="https://github.com/JTLiner925/quiz-app-jt" target="_blank">GitHub Repo</a>
         </p>`;
         const jagThumb = `<a href="https://thinkful-ei-jaguar.github.io/quiz-app-project-BladeJT/"target="_blank"><img src="./jaguar.jpg" alt='Mean Jaguar looking at you'/></a><br>`;
 
         const appThumb = `<a href="https://jtliner925.github.io/quiz-app-jt/"target="_blank"><img src="./bible-image.jpg" alt='bible open with glasses'/></a><br>`;
         const jagTech = `<p class='bible-description'>How much do you know about Jaguars?<br>HTML/CSS<br>JavaScript/jQuery<br>
-        <a href="https://github.com/JTLiner925/quiz-app-jt" >GitHub Repo</a>
+        <a href="https://github.com/thinkful-ei-jaguar/quiz-app-project-BladeJT" target="_blank">GitHub Repo</a>
         </p>`
         $('.appTitle').html('Bible Quiz');
         $('.appPic').html(appThumb);
         $('.techUsed').html(tech);
         $('.jagTitle').html('Jaguar Quiz');
         $('.jagPic').html(jagThumb);
+        $('.jagTech').html(jagTech);
         $('.contact-text').html('');
         $('.contact-links').html('');
         $('.profile-text').html('');

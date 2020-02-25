@@ -14,7 +14,7 @@
     font-size: 16px;
     color: #444;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .large-hero {
     position: relative;
@@ -29,18 +29,24 @@
 
   }
   .projects{
-    padding-top: 20px;
     display: flex;
     justify-content: center;
+    
+    
 
   }
   .proj{
     
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    
   }
   .appTitle{
     padding-left: 20px;
+  }
+  #active{
+    transition: 2s;
   }
   #active figcaption{
     background-color: rgba(52, 71, 75, 0.735);
@@ -62,7 +68,7 @@
   
   figure{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     position: relative;
     border-radius: 20px;
     margin: 0;
@@ -72,6 +78,7 @@
   }
   
   figcaption {
+    width: 100%;
     position: absolute;
     top: 0;
     
@@ -102,6 +109,7 @@
   h2 {
 text-shadow:1pt 2pt #444;
       margin-top: 10px;
+      width: 100%;
   }
   footer {
     position: absolute;
@@ -111,22 +119,7 @@ text-shadow:1pt 2pt #444;
     right: 0;
     bottom: 0;
   }
-  .projects-hero:hover {
-    opacity: 70%;
-    box-shadow: 0 12px 28px 0 rgba(196, 148, 65, 0.993);  
-    
-    transition-duration: 1s;
-  }
-  .profile-hero:hover{
-    opacity: 70%;
-    box-shadow: 0 12px 28px 0 rgba(15, 56, 167, 0.91); 
-    transition-duration: 1s;
-  }
-  .contact-hero:hover{
-    opacity: 70%;
-    box-shadow: 0 12px 28px 0 rgba(41, 20, 8, 0.98); 
-    transition-duration: 1s;
-  }
+  
   header>p{
       width: 50%;
       display: contents;
@@ -136,7 +129,7 @@ text-shadow:1pt 2pt #444;
       align-items: center;
       align-content: center;
       display: flex;
-      margin: 0;
+      /* margin: 0; */
     box-shadow: 0 1px 9px 0 rgba(255, 255, 255, 0.938);
     font-family: "Montserrat" ;
   }
@@ -209,6 +202,10 @@ text-shadow:1pt 2pt #444;
   }
   li:hover {
     cursor: pointer;
+    color: #040404;
+    opacity: 70%;
+      text-shadow: 1px 2px #39393a; 
+      transition-duration: 1s;
   }
   .fa {
     display: flex;
@@ -247,7 +244,22 @@ text-shadow:1pt 2pt #444;
     .hero:hover {
       cursor: pointer;
     }
-    
+    .projects-hero:hover {
+      opacity: 70%;
+      box-shadow: 0 12px 28px 0 rgba(196, 148, 65, 0.993);  
+      
+      transition-duration: 1s;
+    }
+    .profile-hero:hover{
+      opacity: 70%;
+      box-shadow: 0 12px 28px 0 rgba(15, 56, 167, 0.91); 
+      transition-duration: 1s;
+    }
+    .contact-hero:hover{
+      opacity: 70%;
+      box-shadow: 0 12px 28px 0 rgba(41, 20, 8, 0.98); 
+      transition-duration: 1s;
+    }
       li{
           visibility: collapse;
       }
