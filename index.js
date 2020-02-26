@@ -81,7 +81,7 @@ function activeClass(name) {
   $(`section[name=${name}]`).attr('id', 'active');
 }
 function handleProfileClick() {
-  $('.profile-hero, .Profile').on('click', function () {
+  $('.profile-hero, .Profile').on('click focus', function () {
     activeClass($(this).attr('name'));
     const profileBio = `<p>I live in the Austin area, but grew up in West Texas with dirt fields and mesquite trees. Now when I go outside I see rolling hills and streams nearby, it makes it easy to allow your mind to wander and be creative! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was time for a change. 
     I love thinking outside the box and working with a team to create content that is important to the client. This is a ton of fun, and it's why I got into being a developer.
@@ -102,11 +102,11 @@ function handleProfileClick() {
   });
 }
 function handleContactClick() {
-  $('.contact-hero, .Contact').on('click', function () {
+  $('.contact-hero, .Contact').on('click focus', function () {
     activeClass($(this).attr('name'));
     const contactInfo = `<p>To contact me follow one of the links below and let\'s get started!</p>`;
-    const contactLinks = `<a href="https://www.linkedin.com/in/jt-liner-916a2a53/" aria-label="LinkedIn" class="fa fa-linkedin" target="_blank"></a>
-        <a href="https://github.com/JTLiner925/" aria-label="GitHub"class="fa fa-github" target="_blank"></a>
+    const contactLinks = `<a href="https://www.linkedin.com/in/jt-liner-916a2a53/" aria-label="LinkedIn" tabindex='7'class="fa fa-linkedin" target="_blank"></a>
+        <a href="https://github.com/JTLiner925/" aria-label="GitHub"class="fa fa-github" target="_blank"tabindex='8'></a>
        `;
 
     $('.contact-text').html(contactInfo);
@@ -123,7 +123,7 @@ function handleContactClick() {
   });
 }
 function handleProjectClick() {
-  $('.projects-hero, .Projects').on('click', function () {
+  $('.projects-hero, .Projects').on('click focus', function () {
     activeClass($(this).attr('name'));
     const tech = `<p class='bible-description'>Did Jesus really say that?<br>HTML/CSS<br>JavaScript/jQuery<br></p>`;
     const bibleRepo = `<a href="https://github.com/JTLiner925/quiz-app-jt" target="_blank"tabindex='4'>GitHub Repo</a>`;
