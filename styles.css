@@ -22,21 +22,19 @@
   #active{
     opacity: 100%;
   }
+ 
   
-  .bible-description{
-    /* display: flex; */
-    height: 100px;
-  }
   .projects{
     display: flex;
-    justify-content: center;
+    /* flex-direction: row;
+    justify-content: center; */
   }
-  .pro{
+  .proj{
+    width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    text-align: start;
-    /* padding-left: 10px; */
+    /* justify-content: center; */
+    text-align: ;
   }
   /* .bible-repo{
     display: flex;
@@ -44,9 +42,9 @@
     justify-content: flex-start;
     text-align: start;
   } */
-  .appTitle{
+  /* .appTitle{
     padding-left: 20px;
-  }
+  } */
   #active{
     transition: 2s;
     z-index: 1;
@@ -60,10 +58,11 @@
     opacity: 1;
   }
    .appPic, .jagPic{
+     padding-bottom: 10px;
     width: 100px;
     height: 100px;
     filter: unset;
-    margin-left: 20px;
+    align-content: center;
   }
    .appPic:hover, .jagPic:hover{
     width: 102px;
@@ -104,11 +103,20 @@
   }
   figcaption p {
     overflow: hidden;
-    padding: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
   }
   figcaption h2 {
     opacity: 1;
     
+  }
+   .bible-description{
+    height: 120px;
+     padding: 0;
+    overflow: unset;
+  }  
+  .jagTech, .techUsed {
+    padding-left: 0;
   }
   main {
     position: relative;
@@ -181,10 +189,11 @@ text-shadow:1pt 2pt #444;
      visibility: hidden;
   }
   .hero p {
+    
       margin: 0;
       /* margin-bottom: 20px; */
       text-align: start;
-      justify-items: flex-end;
+      /* justify-items: flex-start; */
       /* padding-left: 10px;
       padding-right: 10px; */  
   }
@@ -217,13 +226,18 @@ text-shadow:1pt 2pt #444;
       text-shadow: 1px 2px #39393a; 
       transition-duration: 1s;
   }
-  
-  .repo:hover {
+  a{
+    color: #1626ff;
+    text-shadow: .5px .5px #d2d2fc9f; 
+  }
+  a:hover {
+    width: 102%;
+    height: 102%;
     cursor: pointer;
-    color: #040404;
+    color: #75f11c;
     opacity: 70%;
-      text-shadow: 1px 2px #39393a; 
-      transition-duration: 1s;
+      text-shadow: .5px .5px #39393a; 
+      transition-duration: .7s;
   }
   .fa {
     display: flex;
@@ -260,7 +274,9 @@ text-shadow:1pt 2pt #444;
   @media screen and (min-width: 900px) {
     .hero:hover {
       cursor: pointer;
-      
+    }
+    body{
+      line-height: 1.5;
     }
     #active{
       cursor: default;
@@ -319,7 +335,7 @@ text-shadow:1pt 2pt #444;
        position: absolute;
        top: 0;
        padding: 10px;
-       opacity: .7;
+       opacity: .8;
        transition: opacity 1s 2s;
      }
      figcaption p{

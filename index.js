@@ -36,7 +36,7 @@ function startPage() {
            </div>
            <p class="techUsed"></p>
            <p class='bible-repo repo'></p>
-            <p class="projects-text"></p> 
+            
             </div>
             <div class = 'proj'>
             <p class="jagTitle"></p>
@@ -45,7 +45,7 @@ function startPage() {
            
            <p class="jagTech"></p>
            <p class='jag-repo repo'></p>
-            <p class="projects-text"></p> 
+            
             </div>  
             </section>
             </figcaption>
@@ -92,10 +92,9 @@ function activeClass(name) {
 function handleProfileClick() {
   $('.profile-hero, .Profile').on('click', function () {
     activeClass($(this).attr('name'));
-    const profileBio = `<p>I live in the Austin area, but grew up in West Texas with dirt fields and mesquite trees. Now when I go outside I see rolling hills and streams nearby, it makes it easy to allow your mind to wander! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was time for a change. 
-      I love thinking outside the box and being creative. To be able to help others create content that is important to them is exciting for me and the reason why I got into being a developer.
-      In my spare time ...well, I don’t have any! Instead, I am happily married with three kids! We drive a min-van, go hiking, and love Jesus!
-      </p>`;
+    const profileBio = `<p>I live in the Austin area, but grew up in West Texas with dirt fields and mesquite trees. Now when I go outside I see rolling hills and streams nearby, it makes it easy to allow your mind to wander and be creative! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was time for a change. 
+    I love thinking outside the box and working with a team to create content that is important to the client. This is a ton of fun, and it's why I got into being a developer.
+    In my spare time ...well, I don’t have any! Instead, I am happily married with three kids! We drive a min-van, go hiking, and love Jesus!</p>`;
 
     $('.profile-text').html(profileBio);
 
