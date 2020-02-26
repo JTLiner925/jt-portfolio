@@ -136,7 +136,7 @@ text-shadow:1pt 2pt #444;
   }
   footer {
     padding-top: 10px;
-    position: fixed;
+    position: absolute;
     width: 100%;
     background-color: #40b3f148;
     /* left: 0;
@@ -330,20 +330,20 @@ text-shadow:1pt 2pt #444;
         opacity: 1;
         transition: unset;
       } */
-     figcaption{
+     figcaption {
        width: 100%;
        position: absolute;
        top: 0;
        padding: 10px;
-       opacity: .8;
+       opacity: .7;
        transition: opacity 1s 2s;
      }
      figcaption p{
-      opacity: 1;
+      opacity: 0;
       transition: opacity 1s 2s;
      }
 
-     #active figcaption{
+     #active figcaption p{
        transition: 1s 2s;
        opacity: 1;
      }
