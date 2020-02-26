@@ -4,18 +4,17 @@
 
 let currentPage = 'startPage';
 function startPage() {
-  return `<section class ="top-background">
-   </section>
+  return `</section>
 <div class="button-toggle">
    <nav role="navigation">
        <ul class="toggle-section">
            <li name="Profile"class="Profile" tabindex='1'>Profile</li>
            <li name="Projects"class="Projects"tabindex='2'>Projects</li>
-           <li name="Contact"class="Contact"tabindex='3 '>Contact Me</li>
+           <li name="Contact"class="Contact"tabindex='3'>Contact Me</li>
        </ul>
    </nav>
    <div class="large-hero">
-       <section name="Profile" class="profile-hero hero"id="active" >
+       <section name="Profile" class="profile-hero hero"id="active"tabindex='1' >
        <figure>
             <img src='./self-port.JPG'class='img' alt='Picture of JT and Christy Liner'/>
             <figcaption>
@@ -24,7 +23,7 @@ function startPage() {
            </figcation>
            </figure>
        </section>
-       <section name="Projects"class="projects-hero hero ">
+       <section name="Projects"class="projects-hero hero "tabindex='2'>
        <figure>
        <img src='./work-station.jpg' class='img'alt='workstation with multiple computers' class="bible-app"/>
        <figcaption>
@@ -52,7 +51,7 @@ function startPage() {
             </figure> 
 
         </section>
-       <section name="Contact"class="contact-hero hero">
+       <section name="Contact"class="contact-hero hero"tabindex='6'>
        <figure>
        <img src='./phone.jpg' class='img'alt='retro telephone'/> 
        <figcaption>   
@@ -64,14 +63,6 @@ function startPage() {
        </section>
    </div>
 </div>
-<div class='expanded'>
-   <section class="profile expand">this is the about me section</section>
-   <section class="projects expand">a list of my projects will go here</section>
-   <section class="contact expand">my contact info</section>
-</div>
-<section class = "bottom-background">
-   
-</section>
    `;
 }
 $(window).on("load", () => {
@@ -135,12 +126,12 @@ function handleProjectClick() {
   $('.projects-hero, .Projects').on('click', function () {
     activeClass($(this).attr('name'));
     const tech = `<p class='bible-description'>Did Jesus really say that?<br>HTML/CSS<br>JavaScript/jQuery<br></p>`;
-    const bibleRepo = `<a href="https://github.com/JTLiner925/quiz-app-jt" target="_blank">GitHub Repo</a>`;
-    const jagThumb = `<a href="https://thinkful-ei-jaguar.github.io/quiz-app-project-BladeJT/"target="_blank"><img src="./jaguar.jpg" alt=\'Mean Jaguar looking at you\'/></a><br>`;
+    const bibleRepo = `<a href="https://github.com/JTLiner925/quiz-app-jt" target="_blank"tabindex='4'>GitHub Repo</a>`;
+    const jagThumb = `<a href="https://thinkful-ei-jaguar.github.io/quiz-app-project-BladeJT/"target="_blank"tabindex='5'><img src="./jaguar.jpg" alt=\'Mean Jaguar looking at you\'/></a><br>`;
 
-    const appThumb = `<a href="https://jtliner925.github.io/quiz-app-jt/"target="_blank"><img src="./bible-image.jpg" alt=\'bible open with glasses\'/></a><br>`;
+    const appThumb = `<a href="https://jtliner925.github.io/quiz-app-jt/"target="_blank"tabindex='3'><img src="./bible-image.jpg" alt=\'bible open with glasses\'/></a><br>`;
     const jagTech = `<p class='bible-description'>How much do you know<br> about Jaguars?<br>HTML/CSS<br>JavaScript/jQuery<br></p>`;
-    const jagRepo = `<a href="https://github.com/thinkful-ei-jaguar/quiz-app-project-BladeJT" target="_blank">GitHub Repo</a>`;
+    const jagRepo = `<a href="https://github.com/thinkful-ei-jaguar/quiz-app-project-BladeJT" target="_blank"tabindex='6'>GitHub Repo</a>`;
         
     $('.appTitle').html('Bible Quiz');
     $('.appPic').html(appThumb);
