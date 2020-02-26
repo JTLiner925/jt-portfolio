@@ -21,33 +21,37 @@
   }
   #active{
     opacity: 100%;
-    
   }
+  
   .bible-description{
     /* display: flex; */
     height: 100px;
-
   }
   .projects{
     display: flex;
     justify-content: center;
-    
-    
-
   }
-  .proj{
-    
+  .pro{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
+    text-align: start;
+    /* padding-left: 10px; */
   }
+  /* .bible-repo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: start;
+  } */
   .appTitle{
     padding-left: 20px;
   }
   #active{
     transition: 2s;
+    z-index: 1;
   }
+  
   #active figcaption{
     background-color: rgba(52, 71, 75, 0.735);
     height: 100%;
@@ -55,13 +59,13 @@
     border-radius: 20px;
     opacity: 1;
   }
-  .appPic, .jagPic{
+   .appPic, .jagPic{
     width: 100px;
     height: 100px;
     filter: unset;
     margin-left: 20px;
   }
-  .appPic:hover, .jagPic:hover{
+   .appPic:hover, .jagPic:hover{
     width: 102px;
     height: 102px;
     opacity: 80%;
@@ -86,6 +90,11 @@
     opacity: 0;
     transition: opacity 1s 2s;
   }
+  figcaption p {
+    font-size: 20px;
+    opacity: 1;
+    transition: opacity 1s 2s;
+  }
   figure img{
     width: 100%;
     height: 100%;
@@ -96,10 +105,14 @@
   figcaption p {
     overflow: hidden;
     padding: 10px;
-    
+  }
+  figcaption h2 {
+    opacity: 1;
     
   }
   main {
+    position: relative;
+    min-height: 80vh;
      background-color: #ffffff; 
      margin: 0;
   }
@@ -114,12 +127,14 @@ text-shadow:1pt 2pt #444;
       width: 100%;
   }
   footer {
-    position: absolute;
+    padding-top: 10px;
+    /* position: fixed; */
     width: 100%;
     background-color: #40b3f148;
-    left: 0;
-    right: 0;
+    /* left: 0;
+    right: 0; */
     bottom: 0;
+    height: 2.5rem;
   }
   
   header>p{
@@ -153,19 +168,17 @@ text-shadow:1pt 2pt #444;
     margin: auto;
     margin-bottom: 50px;
     box-shadow: 0 12px 28px 0 rgba(15, 56, 167, 0.671);  
-    max-width: 600px;
+    /* max-width: 600px; */
    }
     .toggle-section{
       padding: 0;
       align-items: center;
     height: 40px;
     font-family: "Montserrat";
-    
   }
   .hero h2 {
       margin: 0;
      visibility: hidden;
-     
   }
   .hero p {
       margin: 0;
@@ -173,16 +186,12 @@ text-shadow:1pt 2pt #444;
       text-align: start;
       justify-items: flex-end;
       /* padding-left: 10px;
-      padding-right: 10px; */
-      
+      padding-right: 10px; */  
   }
-  
   .projects-hero {
     height: 450px;
   margin: auto;
   margin-bottom: 50px;
-
-
   }
   .project-text{
     padding: 10px;
@@ -191,7 +200,6 @@ text-shadow:1pt 2pt #444;
       height: 450px;
     margin: auto;
     margin-bottom: 50px;
-
   }
   li {
       display: inline-flex;
@@ -203,6 +211,14 @@ text-shadow:1pt 2pt #444;
       font-size: 20px;
   }
   li:hover {
+    cursor: pointer;
+    color: #040404;
+    opacity: 70%;
+      text-shadow: 1px 2px #39393a; 
+      transition-duration: 1s;
+  }
+  
+  .repo:hover {
     cursor: pointer;
     color: #040404;
     opacity: 70%;
@@ -222,10 +238,8 @@ text-shadow:1pt 2pt #444;
     text-decoration-line: none;
     margin-left: 20px;
     background-color: #ffffff00;
-
     border-radius: 50px;
     font-size: 24px;
-    
   }
   .fa:hover {
     opacity: 0.7;
@@ -242,14 +256,18 @@ text-shadow:1pt 2pt #444;
     background: #2c4762;
     color: white;
   }
+  
   @media screen and (min-width: 900px) {
     .hero:hover {
       cursor: pointer;
+      
+    }
+    #active{
+      cursor: default;
     }
     .projects-hero:hover {
       opacity: 70%;
       box-shadow: 0 12px 28px 0 rgba(196, 148, 65, 0.993);  
-      
       transition-duration: 1s;
     }
     .profile-hero:hover{
@@ -285,19 +303,30 @@ text-shadow:1pt 2pt #444;
           transition: 1s;
           /* border-radius: 5px; */
       }
-      
-      .hero h2 {
-          visibility: visible;
-          
+      #title {
+        opacity: 100%;
+        transition: unset;
       }
+      .hero h2 {
+          visibility: unset;
+      }
+      /* figcaption .hero h2{
+        opacity: 1;
+        transition: unset;
+      } */
      figcaption{
        width: 100%;
        position: absolute;
        top: 0;
        padding: 10px;
-       opacity: 0;
+       opacity: .7;
        transition: opacity 1s 2s;
      }
+     figcaption p{
+      opacity: 1;
+      transition: opacity 1s 2s;
+     }
+
      #active figcaption{
        transition: 1s 2s;
        opacity: 1;
@@ -309,12 +338,10 @@ text-shadow:1pt 2pt #444;
     .projects-hero {
         opacity: 100%;
         padding: 0;
-        
         display: flex;
         flex-direction: column;
         /* justify-content: center; */
         height: 450px;
-      
       box-shadow: 0 12px 28px 0 rgba(196, 148, 65, 0.645);  
     }
     
