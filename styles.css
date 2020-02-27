@@ -20,7 +20,7 @@
     position: relative;
   }
   #active{
-    opacity: 100%;
+    opacity: 1;
   }
  
   
@@ -67,7 +67,7 @@
    .appPic:hover, .jagPic:hover{
     width: 102px;
     height: 102px;
-    opacity: 80%;
+    opacity: .8;
   }
   
   figure{
@@ -224,7 +224,7 @@ text-shadow:1pt 2pt #444;
   li:hover {
     cursor: pointer;
     color: #040404;
-    opacity: 70%;
+    opacity: .7;
       text-shadow: 1px 2px #39393a; 
       transition-duration: 1s;
   }
@@ -235,7 +235,7 @@ text-shadow:1pt 2pt #444;
   .repo a:hover {
     cursor: pointer;
     color: #75f11c;
-    opacity: 70%;
+    opacity: .7;
       text-shadow: .5px .5px #39393a; 
       transition-duration: .7s;
   }
@@ -284,17 +284,17 @@ text-shadow:1pt 2pt #444;
       cursor: default;
     }
     .projects-hero:hover {
-      opacity: 70%;
+      opacity: .7;
       box-shadow: 0 12px 28px 0 rgba(196, 148, 65, 0.993);  
       transition-duration: 1s;
     }
     .profile-hero:hover{
-      opacity: 70%;
+      opacity: .7;
       box-shadow: 0 12px 28px 0 rgba(15, 56, 167, 0.91); 
       transition-duration: 1s;
     }
     .contact-hero:hover{
-      opacity: 70%;
+      opacity: .7;
       box-shadow: 0 12px 28px 0 rgba(41, 20, 8, 0.98); 
       transition-duration: 1s;
     }
@@ -313,7 +313,7 @@ text-shadow:1pt 2pt #444;
           width: 100%;  
       }
       .hero {
-        opacity: 100%;
+        opacity: 1;
         position: unset;
           width: 50%;
           max-width: 23%;
@@ -322,7 +322,7 @@ text-shadow:1pt 2pt #444;
           /* border-radius: 5px; */
       }
       #title {
-        opacity: 100%;
+        opacity: 1;
         transition: unset;
       }
       .hero h2 {
@@ -347,14 +347,14 @@ text-shadow:1pt 2pt #444;
 
      #active figcaption p, #active figcaption div{
        transition: 1s 2s;
-       opacity: 1;
+       opacity: .7;
      }
       #active {
         max-width: 50%;
         transition: 2s;
       }
     .projects-hero {
-        opacity: 100%;
+        opacity: 1;
         padding: 0;
         display: flex;
         flex-direction: column;
@@ -365,7 +365,7 @@ text-shadow:1pt 2pt #444;
     }
     
     .contact-hero {
-        opacity: 100%;
+        opacity: 1;
         padding: 0;
         height: 450px;
       box-shadow: 0 12px 28px 0 rgba(70, 37, 19, 0.678); 
