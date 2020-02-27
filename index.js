@@ -1,7 +1,6 @@
 // 'use strict';
 
 
-
 let currentPage = 'startPage';
 function startPage() {
   return `</section>
@@ -68,7 +67,7 @@ function startPage() {
 $(window).on("load", () => {
     const profileBio = `I live in the Austin area, but grew up in West Texas with dirt fields and mesquite trees. Now when I go outside I see rolling hills and streams nearby, it makes it easy to allow your mind to wander and be creative! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was time for a change. 
       I love thinking outside the box and working with a team to create content that is important to the client. This is a ton of fun, and it's why I got into being a developer.
-      In my spare time ...well, I don’t have any! Instead, I am happily married with three kids! We drive a min-van, go hiking, and love Jesus!`;
+      In my spare time ...well, I don’t have any! Instead, I am happily married with three kids! We drive a mini-van, go hiking, and love Jesus!`;
   
     $(".profile-text").text(profileBio);
   });
@@ -85,7 +84,7 @@ function handleProfileClick() {
     activeClass($(this).attr('name'));
     const profileBio = `<p>I live in the Austin area, but grew up in West Texas with dirt fields and mesquite trees. Now when I go outside I see rolling hills and streams nearby, it makes it easy to allow your mind to wander and be creative! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was time for a change. 
     I love thinking outside the box and working with a team to create content that is important to the client. This is a ton of fun, and it's why I got into being a developer.
-    In my spare time ...well, I don’t have any! Instead, I am happily married with three kids! We drive a min-van, go hiking, and love Jesus!</p>`;
+    In my spare time ...well, I don’t have any! Instead, I am happily married with three kids! We drive a mini-van, go hiking, and love Jesus!</p>`;
 
     $('.profile-text').html(profileBio);
 
@@ -125,12 +124,12 @@ function handleContactClick() {
 function handleProjectClick() {
   $('.projects-hero, .Projects').on('click focus', function () {
     activeClass($(this).attr('name'));
-    const tech = `<p class='bible-description'>Did Jesus really say that?<br>HTML/CSS<br>JavaScript/jQuery<br></p>`;
+    const tech = `<p class='bible-description'>Did Jesus really say that?<br>HTML/CSS<br>JS/jQuery<br></p>`;
     const bibleRepo = `<a href="https://github.com/JTLiner925/quiz-app-jt" target="_blank"tabindex='4'>GitHub Repo</a>`;
     const jagThumb = `<a href="https://thinkful-ei-jaguar.github.io/quiz-app-project-BladeJT/"target="_blank"tabindex='5'><img src="./jaguar.jpg" alt=\'Mean Jaguar looking at you\'/></a><br>`;
 
     const appThumb = `<a href="https://jtliner925.github.io/quiz-app-jt/"target="_blank"tabindex='3'><img src="./bible-image.jpg" alt=\'bible open with glasses\'/></a><br>`;
-    const jagTech = `<p class='bible-description'>How much do you know<br> about Jaguars?<br>HTML/CSS<br>JavaScript/jQuery<br></p>`;
+    const jagTech = `<p class='bible-description'>How much do you know<br> about Jaguars?<br>HTML/CSS<br>JS/jQuery<br></p>`;
     const jagRepo = `<a href="https://github.com/thinkful-ei-jaguar/quiz-app-project-BladeJT" target="_blank"tabindex='6'>GitHub Repo</a>`;
         
     $('.appTitle').html('Bible Quiz');

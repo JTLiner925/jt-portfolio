@@ -90,7 +90,8 @@
     transition: opacity 1s 2s;
   }
   figcaption p {
-    font-size: 20px;
+    margin-right: 2px;
+    font-size: 16px;
     opacity: 1;
     transition: opacity 1s 2s;
   }
@@ -272,7 +273,7 @@ text-shadow:1pt 2pt #444;
     width: 60px;
   }
   
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 720px) {
     .hero:hover {
       cursor: pointer;
     }
