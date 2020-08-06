@@ -35,15 +35,7 @@ function startPage() {
            <p class='bible-repo repo'></p>
             
             </div>
-            <div class = 'proj'>
-            <p class="dbgTitle"></p>
-           <div class='dbgPic pic'>
-           </div>
-           
-           <p class="dbgTech"></p>
-           <p class='dbg-repo repo'></p>
-            
-            </div>  
+              
             </section>
             </figcaption>
             </figure> 
@@ -123,15 +115,15 @@ function handleContactClick() {
 function handleProjectClick() {
   $('.projects-hero, .Projects').on('click focus', function() {
     activeClass($(this).attr('name'));
-    const tech = '<p class=\'bible-description\'>Did Jesus really say that?<br>HTML/CSS<br>JS/jQuery<br></p>';
-    const bibleRepo = '<a href="https://github.com/JTLiner925/quiz-app-jt" target="_blank"tabindex=\'4\'>GitHub Repo</a>';
-    const dbgThumb = '<a href="https://jtliner925.github.io/DiscoveryBibleGroup/"target="_blank"tabindex=\'5\'><img src="./dbg.png" alt=\'Discovery Bible Group\'/></a><br>';
+    const tech = '<p class=\'bible-description\'>oneAnother - do everything imaginable for your church small group in one location!<br>HTML/CSS<br>React.js/Node.js<br>PostgreSQL</p>';
+    const bibleRepo = '<a href="https://github.com/JTLiner925/oneanother" target="_blank"tabindex=\'4\'>GitHub Repo</a>';
+    const dbgThumb = '<a href="https://oneanother.now.sh/"target="_blank"tabindex=\'5\'><img src="./one-another.png" alt=\'one Another\'/></a><br>';
 
-    const appThumb = '<a href="https://jtliner925.github.io/quiz-app-jt/"target="_blank"tabindex=\'3\'><img src="./bible-image.jpg" alt=\'bible open with glasses\'/></a><br>';
+    const appThumb = '<a href="https://oneanother.now.sh/"target="_blank"tabindex=\'3\'><img src="./icons8-holy-bible-100.ico" alt=\'one Another\'/></a><br>';
     const dbgTech = '<p class=\'bible-description\'>Discover the bible<br>with others!<br>HTML/CSS<br>JS/jQuery<br></p>';
     const dbgRepo = '<a href="https://github.com/JTLiner925/DiscoveryBibleGroup" target="_blank"tabindex=\'6\'>GitHub Repo</a>';
 
-    $('.appTitle').html('Bible Quiz');
+    $('.appTitle').html('oneAnother');
     $('.appPic').html(appThumb);
     $('.techUsed').html(tech);
     $('.bible-repo').html(bibleRepo);
