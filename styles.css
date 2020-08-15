@@ -44,7 +44,7 @@ body {
   opacity: 1;
 }
 .appPic,
-.dbgPic {
+.prayerPic {
   padding-bottom: 10px;
   width: 100px;
   height: 100px;
@@ -52,7 +52,7 @@ body {
   align-content: center;
 }
 .appPic:hover,
-.dbgPic:hover {
+.prayerPic:hover {
   width: 102px;
   height: 102px;
   opacity: 0.6;
@@ -103,7 +103,7 @@ figcaption h2 {
   padding: 0;
   overflow: unset;
 }
-.dbgTech,
+.prayerTech,
 .techUsed {
   padding-left: 0;
 }
@@ -175,7 +175,7 @@ header {
   visibility: hidden;
 }
 .hero p {
-  margin: 0;
+  /* margin: 0; */
   text-align: start;
 }
 .projects-hero {

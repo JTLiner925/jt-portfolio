@@ -35,6 +35,14 @@ function startPage() {
            <p class='bible-repo repo'></p>
             
             </div>
+            <div class ='proj'>
+           <p class="prayerTitle"></p>
+           <div class='prayerPic pic'>
+           </div>
+           <p class="prayerTech"></p>
+           <p class='prayer-repo repo'></p>
+            
+            </div>
               
             </section>
             </figcaption>
@@ -84,10 +92,10 @@ function handleProfileClick() {
     $('.appTitle').html('');
     $('.appPic').html('');
     $('.techUsed').html('');
-    $('.dbgTitle').html('');
-    $('.dbgPic').html('');
-    $('.dbgTech').html('');
-    $('.dbg-repo').html('');
+    $('.prayerTitle').html('');
+    $('.prayerPic').html('');
+    $('.prayerTech').html('');
+    $('.prayer-repo').html('');
     $('.bible-repo').html('');
   });
 }
@@ -105,10 +113,10 @@ function handleContactClick() {
     $('.appTitle').html('');
     $('.appPic').html('');
     $('.techUsed').html('');
-    $('.dbgTitle').html('');
-    $('.dbgPic').html('');
-    $('.dbgTech').html('');
-    $('.dbg-repo').html('');
+    $('.prayerTitle').html('');
+    $('.prayerPic').html('');
+    $('.prayerTech').html('');
+    $('.prayer-repo').html('');
     $('.bible-repo').html('');
   });
 }
@@ -117,20 +125,20 @@ function handleProjectClick() {
     activeClass($(this).attr('name'));
     const tech = '<p class=\'bible-description\'>oneAnother - do everything imaginable for your church small group in one location!<br>HTML/CSS<br>React.js/Node.js<br>PostgreSQL</p>';
     const bibleRepo = '<a href="https://github.com/JTLiner925/oneanother" target="_blank"tabindex=\'4\'>GitHub Repo</a>';
-    const dbgThumb = '<a href="https://oneanother.now.sh/"target="_blank"tabindex=\'5\'><img src="./one-another.png" alt=\'one Another\'/></a><br>';
+    const prayerThumb = '<a href="https://prayer-circles.vercel.app/"target="_blank"tabindex=\'5\'><img src="./icons8-church-100.png" alt=\'prayer circles\'/></a><br>';
 
     const appThumb = '<a href="https://oneanother.now.sh/"target="_blank"tabindex=\'3\'><img src="./icons8-holy-bible-100.ico" alt=\'one Another\'/></a><br>';
-    const dbgTech = '<p class=\'bible-description\'>Discover the bible<br>with others!<br>HTML/CSS<br>JS/jQuery<br></p>';
-    const dbgRepo = '<a href="https://github.com/JTLiner925/DiscoveryBibleGroup" target="_blank"tabindex=\'6\'>GitHub Repo</a>';
+    const prayerTech = '<p class=\'bible-description\'>Pray for your group<br>and stay connected when you\'re away!<br>HTML/CSS<br>React/Node<br>PostgreSQL<br></p>';
+    const prayerRepo = '<a href="https://github.com/JTLiner925/prayer-circles" target="_blank"tabindex=\'6\'>GitHub Repo</a>';
 
     $('.appTitle').html('oneAnother');
     $('.appPic').html(appThumb);
     $('.techUsed').html(tech);
     $('.bible-repo').html(bibleRepo);
-    $('.dbgTitle').html('Discovery Bible Group');
-    $('.dbgPic').html(dbgThumb);
-    $('.dbgTech').html(dbgTech);
-    $('.dbg-repo').html(dbgRepo);
+    $('.prayerTitle').html('Prayer Circles');
+    $('.prayerPic').html(prayerThumb);
+    $('.prayerTech').html(prayerTech);
+    $('.prayer-repo').html(prayerRepo);
     $('.contact-text').html('');
     $('.contact-links').html('');
     $('.profile-text').html('');
