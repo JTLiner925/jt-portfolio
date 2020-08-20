@@ -21,21 +21,46 @@ body {
 }
 #active {
   opacity: 1;
+  transition: opacity 1s .5s;
 }
-
 .projects {
   display: flex;
+  flex-direction: column;
+  height: 95%;
 }
 .proj {
-  width: 80%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  height: 30%;
+  margin-bottom: 20px;
+
+}
+.proj p {
+  width: 90%;
 }
 #active {
   transition: 1s;
   z-index: 1;
 }
-
+.appTitle,
+.prayerTitle,
+.dbgTitle {
+  text-align: left;
+  margin: 0;
+}
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30%;
+}
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 70%;
+  
+}
 #active figcaption {
   background-color: rgba(52, 71, 75, 0.835);
   height: 100%;
@@ -44,7 +69,8 @@ body {
   opacity: 1;
 }
 .appPic,
-.prayerPic {
+.prayerPic,
+.dbgPic {
   padding-bottom: 10px;
   width: 100px;
   height: 100px;
@@ -52,10 +78,14 @@ body {
   align-content: center;
 }
 .appPic:hover,
-.prayerPic:hover {
+.prayerPic:hover, 
+.dbgPic:hover{
   width: 102px;
   height: 102px;
-  opacity: 0.6;
+  opacity: 0.8;
+}
+.proj:hover{
+  background-color: rgba(232, 232, 232, 0.338);
 }
 
 figure {
@@ -75,13 +105,12 @@ figcaption {
   top: 0;
   padding: 10px;
   opacity: 0;
-  transition: opacity 1s 1s;
+  transition: opacity 1s .5s;
 }
 figcaption p {
   margin-right: 2px;
-  font-size: 16px;
+  font-size: 13px;
   opacity: 1;
-  transition: opacity 1s 1s;
 }
 figure img {
   opacity: 1;
@@ -99,9 +128,30 @@ figcaption h2 {
   opacity: 1;
 }
 .bible-description {
-  height: 120px;
+  margin: 0;
+  padding: 0;
+}
+.dbgDesc,
+.bibleDesc,
+.bible-tech,
+.prayer-description,
+.prayer-tech {
+  width: 100%;
   padding: 0;
   overflow: unset;
+  margin: 0;
+  height: 20%;
+  text-align: start;
+}
+.bibleDesc,
+.dbgDesc,
+.prayerDesc {
+  height: 80%;
+}
+.dbgDesc,
+.prayer-description {
+  display: flex;
+  line-height: 1.7;
 }
 .prayerTech,
 .techUsed {
@@ -130,10 +180,14 @@ footer {
   bottom: 0;
   height: 2.5rem;
 }
-
 header > p {
   width: 50%;
   display: contents;
+  height: 90%;
+}
+.prayerDesc {
+  margin: 0;
+  padding: 0;
 }
 header {
   background: linear-gradient(
@@ -149,8 +203,8 @@ header {
 }
 .button-toggle {
   align-content: center;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 20px auto;
+  max-width: 1100px;
 }
 .hero {
   position: absolute;
@@ -158,9 +212,16 @@ header {
   border-radius: 20px;
   opacity: 0;
 }
+.profile-text {
+  
+  max-width: 500px;
+  height: 90%;
+  line-height: 1.5;
+}
 .profile-hero {
-  height: 450px;
+  height: 600px;
   margin: auto;
+  width: 100%;
   margin-bottom: 50px;
   box-shadow: 0 12px 28px 0 rgba(15, 56, 167, 0.671);
 }
@@ -175,11 +236,12 @@ header {
   visibility: hidden;
 }
 .hero p {
-  margin: 0;
+  margin: 0 auto;
   text-align: start;
+  line-height: 1.5;
 }
 .projects-hero {
-  height: 450px;
+  height: 650px;
   margin: auto;
   margin-bottom: 50px;
 }
@@ -187,7 +249,7 @@ header {
   padding: 10px;
 }
 .contact-hero {
-  height: 450px;
+  height: 600px;
   margin: auto;
   margin-bottom: 50px;
 }
@@ -250,7 +312,7 @@ a {
   color: white;
   width: 60px;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 650px) {
   .hero:hover {
     cursor: pointer;
   }
@@ -289,6 +351,12 @@ a {
     justify-content: space-around;
     width: 100%;
   }
+  .left-section {
+    width: 30%;
+  }
+  .right-section {
+    width: 65%;
+  }
   .hero {
     opacity: 1;
     position: unset;
@@ -304,44 +372,54 @@ a {
   .hero h2 {
     visibility: unset;
   }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+  }
+  .proj {
+    text-align: start;
+    height: 27%;
+  }
+  .right-section,
+  .left-section {
+    margin-bottom: 20px;
+  }
   figcaption {
     width: 100%;
     position: absolute;
     top: 0;
     padding: 10px;
-    opacity: 0.9;
-    transition: opacity 1s 2s;
+    opacity: 1;
+    transition: opacity 1s .5s;
   }
   figcaption p,
   figcaption div {
     opacity: 0;
-    transition: opacity 1s 2s;
   }
-  #active figcaption p,
-  #active figcaption div {
-    transition: 1s 1s;
-    opacity: 0.9;
+  #active figcaption div
+  {
+    transition: 1s .5s;
+    opacity: 1;
+  }
+  #active figcaption p{
+    opacity: 1;
   }
   #active {
     max-width: 50%;
-    transition: 1s;
-  }
-  .profile-hero{
-    height: 500px;
   }
   .projects-hero {
     opacity: 1;
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 600px;
     box-shadow: 0 12px 28px 0 rgba(196, 148, 65, 0.645);
     z-index: 1;
   }
   .contact-hero {
     opacity: 1;
     padding: 0;
-    height: 500px;
     box-shadow: 0 12px 28px 0 rgba(70, 37, 19, 0.678);
     z-index: 1;
   }
