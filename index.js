@@ -4,15 +4,15 @@ let currentPage = 'startPage';
 function startPage() {
   return `</section>
 <div class="button-toggle">
-   <nav role="navigation">
+   <nav>
        <ul class="toggle-section">
-           <li name="Profile" class="Profile" tabindex='1'>Profile</li>
-           <li name="Projects" class="Projects"tabindex='2'>Projects</li>
-           <li name="Contact" class="Contact"tabindex='3'>Contact Me</li>
+           <li value="Profile" class="Profile" tabindex='1'>Profile</li>
+           <li value="Projects" class="Projects "tabindex='2'>Projects</li>
+           <li value="Contact" class="Contact" tabindex='3'>Contact Me</li>
        </ul>
    </nav>
    <div class="large-hero">
-       <section name="Profile" class="profile-hero hero" id="active" tabindex='1' >
+       <section value="Profile" class="profile-hero hero" id="active" tabindex='1' >
        <figure>
             <img src='./self-port.JPG' class='img' alt='Picture of JT and Christy Liner'/>
             <figcaption>
@@ -21,7 +21,7 @@ function startPage() {
            </figcaption>
            </figure>
        </section>
-       <section name="Projects" class="projects-hero hero" tabindex='2'>
+       <section value="Projects" class="projects-hero hero" tabindex='2'>
        <figure>
        <img src='./work-station.jpg' class='img' alt='workstation with multiple computers' id="bible-app"/>
        <figcaption class='project-div'>
@@ -31,7 +31,8 @@ function startPage() {
 
             <div class='left-section'>
               <h3 class="dbgTitle"></h3>
-              <p class='dbg-repo repo'></p>          
+              <a class='dbg-repo repo'></a> 
+              <a href='https://jtliner925.github.io/DiscoveryBibleGroup/'>Live App</a>         
               <div class='dbgPic pic'></div>
             </div>
 
@@ -46,7 +47,8 @@ function startPage() {
 
             <div class='left-section'>
               <h3 class="appTitle"></h3>
-              <p class='bible-repo repo'></p>          
+              <a class='bible-repo repo'></a>     
+              <a href='https://oneanother.now.sh/'>Live App</a>              
               <div class='appPic pic'></div>
             </div>
 
@@ -62,7 +64,8 @@ function startPage() {
 
               <div class='left-section'>
                 <h3 class="prayerTitle"></h3>
-                <p class='prayer-repo repo'></p>
+                <a class='prayer-repo repo'></a>
+                <a href='https://prayer-circles.vercel.app/'>Live App</a>         
                 <div class='prayerPic pic'></div>
               </div>
             
@@ -78,7 +81,7 @@ function startPage() {
             </figure> 
 
         </section>
-       <section name="Contact" class="contact-hero hero" tabindex='6'>
+       <section value="Contact" class="contact-hero hero" tabindex='3'>
        <figure>
        <img src='./phone.jpg' class='img' alt='retro telephone'/> 
        <figcaption>   
@@ -93,12 +96,12 @@ function startPage() {
    `;
 }
 $(window).on('load', () => {
-  const profileBio = `I live in the Austin area, but grew up in West Texas with dirt fields and mesquite trees. 
+  const profileBio = `I live in the Austin area but grew up in West Texas with dirt fields and mesquite trees. 
   Now when I go outside I see rolling hills and streams nearby. It makes it easy to allow your mind to wander 
   and be creative! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was 
   time for a change. With coding, the answer is always yes, if you have the imagination and determination then you can do it!
   The endless possibilities are really exciting, and if you run into a hurdle that just means you're about to learn something new. 
-  Even from a young age I knew you could achieve more if you work together and that's why I'm excited to join a team and create some awesome code.
+  Even from a young age, I knew you could achieve more if you work together and that's why I'm excited to join a team and create some awesome code.
   In my spare time ...well, I don’t have any! Instead, I am happily married with three kids!
   We drive a mini-van, go hiking, and love Jesus!`;
 
@@ -108,19 +111,19 @@ function render() {
   const mainPortfolio = startPage();
   $('main').html(mainPortfolio);
 }
-function activeClass(name) {
+function activeClass(value) {
   $('.hero').removeAttr('id');
-  $(`section[name=${name}]`).attr('id', 'active');
+  $(`section[value=${value}]`).attr('id', 'active');
 }
 function handleProfileClick() {
   $('.profile-hero, .Profile').on('click focus', function () {
-    activeClass($(this).attr('name'));
-    const profileBio = `I live in the Austin area, but grew up in West Texas with dirt fields and mesquite trees. 
+    activeClass($(this).attr('value'));
+    const profileBio = `I live in the Austin area but grew up in West Texas with dirt fields and mesquite trees. 
     Now when I go outside I see rolling hills and streams nearby. It makes it easy to allow your mind to wander 
     and be creative! Most recently, I was working as a Bakery Manager at a grocery store when I decided it was 
     time for a change. With coding, the answer is always yes, if you have the imagination and determination then you can do it!
     The endless possibilities are really exciting, and if you run into a hurdle that just means you're about to learn something new. 
-    Even from a young age I knew you could achieve more if you work together and that's why I'm excited to join a team and create some awesome code.
+    Even from a young age, I knew you could achieve more if you work together and that's why I'm excited to join a team and create some awesome code.
     In my spare time ...well, I don’t have any! Instead, I am happily married with three kids!
     We drive a mini-van, go hiking, and love Jesus!`;
 
@@ -140,11 +143,11 @@ function handleProfileClick() {
 }
 function handleContactClick() {
   $('.contact-hero, .Contact').on('click focus', function () {
-    activeClass($(this).attr('name'));
+    activeClass($(this).attr('value'));
     const contactInfo =
       '<p>To contact me follow one of the links below and let\'s get started!</p>';
-    const contactLinks = `<a href="https://www.linkedin.com/in/jtliner/" aria-label="LinkedIn" tabindex='7'class="fa fa-linkedin" target="_blank"></a>
-        <a href="https://github.com/JTLiner925/" aria-label="GitHub"class="fa fa-github" target="_blank"tabindex='8'></a>
+    const contactLinks = `<a href="https://www.linkedin.com/in/jtliner/" aria-label="LinkedIn" class="fa fa-linkedin" target="_blank"></a>
+        <a href="https://github.com/JTLiner925/" aria-label="GitHub"class="fa fa-github" target="_blank"></a>
         <a
             href="mailto:jtliner925@gmail.com"
             aria-labelledby="email-link-label"
@@ -168,7 +171,7 @@ function handleContactClick() {
 }
 function handleProjectClick() {
   $('.projects-hero, .Projects').on('click focus', function () {
-    activeClass($(this).attr('name'));
+    activeClass($(this).attr('value'));
     const bibleDesc =
       '<p class=\'bible-description\'>Create a church small group, add events, read the bible together, go over questions, and sign up to bring food items to group all in one location.</p>';
     const dbgDesc =
@@ -176,22 +179,22 @@ function handleProjectClick() {
     const tech =
       '<p class=\'bible-tech\'>HTML/CSS<br>React.js/Node.js<br>PostgreSQL</p>';
     const bibleRepo =
-      '<a href="https://github.com/JTLiner925/oneanother" target="_blank"tabindex=\'4\'>GitHub Repo</a>';
+      '<a href="https://github.com/JTLiner925/oneanother" target="_blank">GitHub Repo</a>';
     const dbgRepo =
-      '<a href="https://github.com/JTLiner925/DiscoveryBibleGroup" target="_blank"tabindex=\'4\'>GitHub Repo</a>';
+      '<a href="https://github.com/JTLiner925/DiscoveryBibleGroup" target="_blank">GitHub Repo</a>';
     const prayerThumb =
-      '<a href="https://prayer-circles.vercel.app/"target="_blank"tabindex=\'5\'><img src="./prayer-circles-1.png" alt=\'prayer circles\'/></a>';
+      '<a href="https://prayer-circles.vercel.app/"target="_blank"><img src="./prayer-circles-1.png" alt=\'prayer circles\'/></a>';
     const prayerDesc =
       '<p class=\'prayer-description\'>Stay connected with your group even while you\'re away. Create groups, events, prayer requests, and even chat with each other!</p>';
     const appThumb =
-      '<a href="https://oneanother.now.sh/"target="_blank"tabindex=\'3\'><img src="./one-another-2.png" alt=\'one Another\'/></a>';
+      '<a href="https://oneanother.now.sh/"target="_blank"><img src="./one-another-2.png" alt=\'one Another\'/></a>';
     const dbgThumb =
-      '<a href="https://jtliner925.github.io/DiscoveryBibleGroup/"target="_blank"tabindex=\'3\'><img src="./dbg.png" alt=\'Discovery Bible Group\'/></a>';
+      '<a href="https://jtliner925.github.io/DiscoveryBibleGroup/"target="_blank"><img src="./dbg.png" alt=\'Discovery Bible Group\'/></a>';
     const prayerTech =
       '<p class=\'prayer-tech\'>HTML/CSS<br>React/Node<br>PostgreSQL<br></p>';
     const dbgTech = '<p class=\'prayer-tech\'>HTML/CSS<br>jQuery<br></p>';
     const prayerRepo =
-      '<a href="https://github.com/JTLiner925/prayer-circles" target="_blank"tabindex=\'6\'>GitHub Repo</a>';
+      '<a href="https://github.com/JTLiner925/prayer-circles" target="_blank">GitHub Repo</a>';
 
     $('.appTitle').html('oneAnother');
     $('.appPic').html(appThumb);
