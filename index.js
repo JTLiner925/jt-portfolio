@@ -6,24 +6,24 @@ function startPage() {
 <div class="button-toggle">
    <nav role="navigation">
        <ul class="toggle-section">
-           <li name="Profile"class="Profile" tabindex='1'>Profile</li>
-           <li name="Projects"class="Projects"tabindex='2'>Projects</li>
-           <li name="Contact"class="Contact"tabindex='3'>Contact Me</li>
+           <li name="Profile" class="Profile" tabindex='1'>Profile</li>
+           <li name="Projects" class="Projects"tabindex='2'>Projects</li>
+           <li name="Contact" class="Contact"tabindex='3'>Contact Me</li>
        </ul>
    </nav>
    <div class="large-hero">
-       <section name="Profile" class="profile-hero hero"id="active"tabindex='1' >
+       <section name="Profile" class="profile-hero hero" id="active" tabindex='1' >
        <figure>
-            <img src='./self-port.JPG'class='img' alt='Picture of JT and Christy Liner'/>
+            <img src='./self-port.JPG' class='img' alt='Picture of JT and Christy Liner'/>
             <figcaption>
            <h2 class="Profile">Profile</h2>
            <p id="profile-text"></p>
-           </figcation>
+           </figcaption>
            </figure>
        </section>
-       <section name="Projects"class="projects-hero hero "tabindex='2'>
+       <section name="Projects" class="projects-hero hero" tabindex='2'>
        <figure>
-       <img src='./work-station.jpg' class='img'alt='workstation with multiple computers' class="bible-app"/>
+       <img src='./work-station.jpg' class='img' alt='workstation with multiple computers' id="bible-app"/>
        <figcaption class='project-div'>
            <h2 >Projects</h2>
            <section class='projects'>
@@ -78,9 +78,9 @@ function startPage() {
             </figure> 
 
         </section>
-       <section name="Contact"class="contact-hero hero"tabindex='6'>
+       <section name="Contact" class="contact-hero hero" tabindex='6'>
        <figure>
-       <img src='./phone.jpg' class='img'alt='retro telephone'/> 
+       <img src='./phone.jpg' class='img' alt='retro telephone'/> 
        <figcaption>   
         <h2 class="contact">Contact Me</h2>
            <p class="contact-text"></p>
@@ -180,13 +180,13 @@ function handleProjectClick() {
     const dbgRepo =
       '<a href="https://github.com/JTLiner925/DiscoveryBibleGroup" target="_blank"tabindex=\'4\'>GitHub Repo</a>';
     const prayerThumb =
-      '<a href="https://prayer-circles.vercel.app/"target="_blank"tabindex=\'5\'><img src="./icons8-church-100.png" alt=\'prayer circles\'/></a>';
+      '<a href="https://prayer-circles.vercel.app/"target="_blank"tabindex=\'5\'><img src="./prayer-circles-1.png" alt=\'prayer circles\'/></a>';
     const prayerDesc =
       '<p class=\'prayer-description\'>Stay connected with your group even while you\'re away. Create groups, events, prayer requests, and even chat with each other!</p>';
     const appThumb =
-      '<a href="https://oneanother.now.sh/"target="_blank"tabindex=\'3\'><img src="./icons8-holy-bible-100.ico" alt=\'one Another\'/></a>';
+      '<a href="https://oneanother.now.sh/"target="_blank"tabindex=\'3\'><img src="./one-another-2.png" alt=\'one Another\'/></a>';
     const dbgThumb =
-      '<a href="https://jtliner925.github.io/DiscoveryBibleGroup/"target="_blank"tabindex=\'3\'><img src="./icons8-reading-100.png" alt=\'Discovery Bible Group\'/></a>';
+      '<a href="https://jtliner925.github.io/DiscoveryBibleGroup/"target="_blank"tabindex=\'3\'><img src="./dbg.png" alt=\'Discovery Bible Group\'/></a>';
     const prayerTech =
       '<p class=\'prayer-tech\'>HTML/CSS<br>React/Node<br>PostgreSQL<br></p>';
     const dbgTech = '<p class=\'prayer-tech\'>HTML/CSS<br>jQuery<br></p>';
